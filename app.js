@@ -3,12 +3,15 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 
+
+
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send('Hi');
+    res.send('list.html');
 });
 
 app.listen(port, () => {
     console.log("서버가 켜졌어요");
 });
+
