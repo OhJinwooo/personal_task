@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(cors());
 
-app.get("/cors-test", (req, res) => {
+app.get("/", (req, res) => {
     res.send('Hi');
 });
 
