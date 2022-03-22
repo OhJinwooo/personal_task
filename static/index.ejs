@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/posts.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/api.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="head" onclick="location.href='/'">Hanghae Blog</h1>
+      <hr id="head_" />
+    </header>
+    <section>
+      <header>
+        <h2 id="secTitle">POSTS</h2>
+        <button
+          id="btnWrite"
+          class="btn btn-default"
+          onclick="location.href = '/write'"
+        >
+          글쓰기
+        </button>
+      </header>
+      <article>
+        <% for (let i = posts.length - 1; i >= 0; i--) { %>
+        <header>
+          <a class="artTitle" href=/detail/<%=posts[i]._id%>><%=posts[i].title %></a>
+          <div class="topRight">
+            <div class="writer">작성자 : <%=posts[i].writer %></div>
+            <div class="date">날짜 : <%=posts[i].date %></div>
+          </div>
+        </header>
+        <p><%=posts[i].description %></p>
+        <% } %>
+      </article>
+    </section>
+  </body>
+</html>

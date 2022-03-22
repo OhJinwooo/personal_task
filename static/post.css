@@ -1,0 +1,40 @@
+#head {
+    width: 220px;
+    margin: 20px auto;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  section {
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  section > header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  #secTitle {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  article > header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 20px 0;
+  }
+  
+  .artTitle {
+    font-size: 20px;
+  }
+  
+  .topRight {
+    display: flex;
+  }
+  
+  .date {
+    margin-left: 10px;
+  }
