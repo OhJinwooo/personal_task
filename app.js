@@ -70,7 +70,7 @@ app.get("/write", (req, res) => {
 });
 
 app.get("/detail/:id", async (req, res) => {
-  const detail = await Post.findById(req.params.id);
+  const detail = await Post.findById(req.params.id);//find뒤에 ById는 왜 붙을까??
   res.render("detail.ejs", { detail });
 });
 

@@ -22,7 +22,7 @@ router.put("/update", async (req, res) => {
   if (!pwCheck.length) {
     res.json({ success: false, msg: "비밀번호가 틀렸습니다." });
   } else {
-    await Post.updateOne({ _id }, { $set: { writer, title, description } });
+    await Post.updateOne({ _id }, { $set: { title, writer, description } });
     res.json({ success: true, msg: "수정이 완료되었습니다." });
   }
 });

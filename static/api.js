@@ -38,7 +38,7 @@ function createPost() {
   
   function updatePost(id) {
     const _id = id;
-    const writer = $("formWriter").val();
+    const writer = $("#formWriter").val();
     const pw = $("#formPw").val();
     const title = $("#formTitle").val();
     const description = $("#formDesc").val();
